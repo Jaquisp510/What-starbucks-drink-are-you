@@ -1,0 +1,85 @@
+<!DOCTYPE html> <html><head>
+        <title>What starbucks drink are you?</title>
+        <link href="https://fonts.googleapis.com/css2?family=Oswald&amp;display=swap" rel="stylesheet">
+    <style>body {
+    font-family: 'Oswald', sans-serif;
+    background-color: pink;
+    text-align: center;
+}
+
+img {
+    width: 400px;
+}</style></head>
+    <body>
+
+        <div class="title">
+            <h1>What Starbucks drink are you?</h1>
+            <img src="https://www.eatthis.com/wp-content/uploads/sites/4/2023/12/Starbucks-drinks.jpg?quality=82&amp;strip=all" alt="Hot coffee, Iced coffee, Refresher, and frap">
+
+        </div>
+
+
+        <div class="questions">
+            <h4>At what age did you start drinking coffee?</h4>
+            <input class="age" placeholder="your answer">
+
+
+
+            <p>
+            </p>
+            <h4>What is your favorite weather? Sunny, Rainy, Warm or cold?</h4>
+            <input class="weather" placeholder="type your favorite weather">
+            <button class="submit">Find out </button>
+
+
+
+
+        </div>
+        <div class="result">
+            this is where the user will see their quiz result!
+        </div>
+
+
+
+    
+<script>
+/*__POPCODESTART__*/
+var coffeeButton = document.querySelector(".coffee-button");
+var button = document.querySelector(".submit");
+var result = document.querySelector(".result");
+
+button.onclick = function () {
+  var ageInput = Number(document.querySelector(".age").value);
+  var weatherInput = document.querySelector(".weather").value;
+
+  if (ageInput >= 10 && weatherInput === "Rainy") {
+    result.innerHTML = "you started drinking coffee at " + ageInput + " and your favorite weather is " + weatherInput + "<img src='https://sev.h-cdn.co/assets/17/18/4000x2250/hd-aspect-1493829263-frapps.jpg'>" + " so you are a Frap";
+  } else if (ageInput < 10 && (weatherInput === "Rainy" || weatherInput === "Cold")) {
+    result.innerHTML = " you started drinking coffee at " + ageInput + " and your favorite weather is " + weatherInput + "<img src='https://qph.cf2.quoracdn.net/main-qimg-f21609c0b26717f54d99a2a25bf6c1d7-lq'>" + " so you are Hot coffee";
+  } else if (weatherInput === "sunny") {
+    document.querySelector(".result").innerHTML = "Capitalize S!!";
+  } else if (weatherInput === "warm") {
+    document.querySelector(".result").innerHTML = "Capitalize W!!!";
+  } else if (weatherInput === "rainy") {
+    document.querySelector(".result").innerHTML = "Capitalize R!!";
+  } else if (weatherInput === "cold") {
+    document.querySelector(".result").innerHTML = "Capitalize C";
+  } else if (ageInput > 10 && (weatherInput === "Sunny" || weatherInput === "Warm")) {
+    result.innerHTML = "you started drinking coffee at " + ageInput + " and your favorite weather is " + weatherInput + "<img src='https://www.tastingtable.com/img/gallery/every-starbucks-refresher-ranked-worst-to-best/l-intro-1655041777.jpg'>" + " so you are a Refresher";
+  } else if (ageInput < 10 && (weatherInput === "Sunny" || weatherInput === "Warm")) {
+    result.innerHTML = "you started drinking coffee at " + ageInput + " and your favorite weather is " + weatherInput + "<img src='https://frostingandfettuccine.com/wp-content/uploads/2022/12/Caramel-Iced-Coffee-6.jpg'>" + " So you are a Iced coffee";
+  } //         result.innerHTML =
+  //             "ur older than 9";
+  //     }
+  //     let weatherInput = document.querySelector(".weather").value;
+  //     console.log(ageInput);
+  //     if (weatherInput === "rainy") {
+  //         result.innerHTML =
+  //             "ur older than 9";
+  //     } else if (weatherInput === "sunny") {
+  //         result.innerHTML =
+  //             "ur younger than 9";
+  //     }
+
+};
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInBvcGNvZGVQcmV2aWV3LmpzIl0sIm5hbWVzIjpbImNvZmZlZUJ1dHRvbiIsImRvY3VtZW50IiwicXVlcnlTZWxlY3RvciIsImJ1dHRvbiIsInJlc3VsdCIsIm9uY2xpY2siLCJhZ2VJbnB1dCIsIk51bWJlciIsInZhbHVlIiwid2VhdGhlcklucHV0IiwiaW5uZXJIVE1MIl0sIm1hcHBpbmdzIjoiQUFBQSxJQUFJQSxZQUFZLEdBQUdDLFFBQVEsQ0FBQ0MsYUFBVCxDQUF1QixnQkFBdkIsQ0FBbkI7QUFDQSxJQUFJQyxNQUFNLEdBQUdGLFFBQVEsQ0FBQ0MsYUFBVCxDQUF1QixTQUF2QixDQUFiO0FBQ0EsSUFBSUUsTUFBTSxHQUFHSCxRQUFRLENBQUNDLGFBQVQsQ0FBdUIsU0FBdkIsQ0FBYjs7QUFFQUMsTUFBTSxDQUFDRSxPQUFQLEdBQWlCLFlBQVc7QUFFeEIsTUFBSUMsUUFBUSxHQUFHQyxNQUFNLENBQUNOLFFBQVEsQ0FBQ0MsYUFBVCxDQUF1QixNQUF2QixFQUErQk0sS0FBaEMsQ0FBckI7QUFDQSxNQUFJQyxZQUFZLEdBQUdSLFFBQVEsQ0FBQ0MsYUFBVCxDQUF1QixVQUF2QixFQUFtQ00sS0FBdEQ7O0FBR0EsTUFBSUYsUUFBUSxJQUFJLEVBQVosSUFBa0JHLFlBQVksS0FBSyxPQUF2QyxFQUFnRDtBQUM1Q0wsSUFBQUEsTUFBTSxDQUFDTSxTQUFQLEdBQ0ksb0NBQW9DSixRQUFwQyxHQUErQyxnQ0FBL0MsR0FBa0ZHLFlBQWxGLEdBQWlHLHlGQUFqRyxHQUE0TCxvQkFEaE07QUFFSCxHQUhELE1BR08sSUFBSUgsUUFBUSxHQUFHLEVBQVgsS0FBa0JHLFlBQVksS0FBSyxPQUFqQixJQUE0QkEsWUFBWSxLQUFLLE1BQS9ELENBQUosRUFBNEU7QUFDL0VMLElBQUFBLE1BQU0sQ0FBQ00sU0FBUCxHQUNJLHFDQUFxQ0osUUFBckMsR0FBZ0QsZ0NBQWhELEdBQW1GRyxZQUFuRixHQUFrRyx3RkFBbEcsR0FBNEwsd0JBRGhNO0FBR0gsR0FKTSxNQUlBLElBQUlBLFlBQVksS0FBSyxPQUFyQixFQUE4QjtBQUNqQ1IsSUFBQUEsUUFBUSxDQUFDQyxhQUFULENBQXVCLFNBQXZCLEVBQWtDUSxTQUFsQyxHQUNJLGdCQURKO0FBRUgsR0FITSxNQUdBLElBQUlELFlBQVksS0FBSyxNQUFyQixFQUE2QjtBQUNoQ1IsSUFBQUEsUUFBUSxDQUFDQyxhQUFULENBQXVCLFNBQXZCLEVBQWtDUSxTQUFsQyxHQUNJLGlCQURKO0FBRUgsR0FITSxNQUdBLElBQUlELFlBQVksS0FBSyxPQUFyQixFQUE4QjtBQUNqQ1IsSUFBQUEsUUFBUSxDQUFDQyxhQUFULENBQXVCLFNBQXZCLEVBQWtDUSxTQUFsQyxHQUNJLGdCQURKO0FBRUgsR0FITSxNQUdBLElBQUlELFlBQVksS0FBSyxNQUFyQixFQUE2QjtBQUNoQ1IsSUFBQUEsUUFBUSxDQUFDQyxhQUFULENBQXVCLFNBQXZCLEVBQWtDUSxTQUFsQyxHQUNJLGNBREo7QUFHSCxHQUpNLE1BSUEsSUFBSUosUUFBUSxHQUFHLEVBQVgsS0FBa0JHLFlBQVksS0FBSyxPQUFqQixJQUE0QkEsWUFBWSxLQUFLLE1BQS9ELENBQUosRUFBNEU7QUFDL0VMLElBQUFBLE1BQU0sQ0FBQ00sU0FBUCxHQUNJLG9DQUFvQ0osUUFBcEMsR0FBK0MsZ0NBQS9DLEdBQWtGRyxZQUFsRixHQUFpRyw0SEFBakcsR0FBK04seUJBRG5PO0FBRUgsR0FITSxNQUdBLElBQUlILFFBQVEsR0FBRyxFQUFYLEtBQWtCRyxZQUFZLEtBQUssT0FBakIsSUFBNEJBLFlBQVksS0FBSyxNQUEvRCxDQUFKLEVBQTRFO0FBQy9FTCxJQUFBQSxNQUFNLENBQUNNLFNBQVAsR0FDSSxvQ0FBb0NKLFFBQXBDLEdBQStDLGdDQUEvQyxHQUFrRkcsWUFBbEYsR0FBaUcsb0dBQWpHLEdBQXVNLDJCQUQzTTtBQUVILEdBaEN1QixDQW1DeEI7QUFDQTtBQUVBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUVBO0FBQ0E7QUFDQTtBQUVBOztBQUVILENBbkREIiwic291cmNlc0NvbnRlbnQiOlsibGV0IGNvZmZlZUJ1dHRvbiA9IGRvY3VtZW50LnF1ZXJ5U2VsZWN0b3IoXCIuY29mZmVlLWJ1dHRvblwiKTtcbmxldCBidXR0b24gPSBkb2N1bWVudC5xdWVyeVNlbGVjdG9yKFwiLnN1Ym1pdFwiKTtcbmxldCByZXN1bHQgPSBkb2N1bWVudC5xdWVyeVNlbGVjdG9yKFwiLnJlc3VsdFwiKTtcblxuYnV0dG9uLm9uY2xpY2sgPSBmdW5jdGlvbigpIHtcblxuICAgIGxldCBhZ2VJbnB1dCA9IE51bWJlcihkb2N1bWVudC5xdWVyeVNlbGVjdG9yKFwiLmFnZVwiKS52YWx1ZSk7XG4gICAgbGV0IHdlYXRoZXJJbnB1dCA9IGRvY3VtZW50LnF1ZXJ5U2VsZWN0b3IoXCIud2VhdGhlclwiKS52YWx1ZTtcblxuXG4gICAgaWYgKGFnZUlucHV0ID49IDEwICYmIHdlYXRoZXJJbnB1dCA9PT0gXCJSYWlueVwiKSB7XG4gICAgICAgIHJlc3VsdC5pbm5lckhUTUwgPVxuICAgICAgICAgICAgXCJ5b3Ugc3RhcnRlZCBkcmlua2luZyBjb2ZmZWUgYXQgXCIgKyBhZ2VJbnB1dCArIFwiIGFuZCB5b3VyIGZhdm9yaXRlIHdlYXRoZXIgaXMgXCIgKyB3ZWF0aGVySW5wdXQgKyBcIjxpbWcgc3JjPSdodHRwczovL3Nldi5oLWNkbi5jby9hc3NldHMvMTcvMTgvNDAwMHgyMjUwL2hkLWFzcGVjdC0xNDkzODI5MjYzLWZyYXBwcy5qcGcnPlwiICtcIiBzbyB5b3UgYXJlIGEgRnJhcFwiO1xuICAgIH0gZWxzZSBpZiAoYWdlSW5wdXQgPCAxMCAmJiAod2VhdGhlcklucHV0ID09PSBcIlJhaW55XCIgfHwgd2VhdGhlcklucHV0ID09PSBcIkNvbGRcIikpIHtcbiAgICAgICAgcmVzdWx0LmlubmVySFRNTCA9XG4gICAgICAgICAgICBcIiB5b3Ugc3RhcnRlZCBkcmlua2luZyBjb2ZmZWUgYXQgXCIgKyBhZ2VJbnB1dCArIFwiIGFuZCB5b3VyIGZhdm9yaXRlIHdlYXRoZXIgaXMgXCIgKyB3ZWF0aGVySW5wdXQgKyBcIjxpbWcgc3JjPSdodHRwczovL3FwaC5jZjIucXVvcmFjZG4ubmV0L21haW4tcWltZy1mMjE2MDljMGIyNjcxN2Y1NGQ5OWEyYTI1YmY2YzFkNy1scSc+XCIrIFwiIHNvIHlvdSBhcmUgSG90IGNvZmZlZVwiO1xuXG4gICAgfSBlbHNlIGlmICh3ZWF0aGVySW5wdXQgPT09IFwic3VubnlcIikge1xuICAgICAgICBkb2N1bWVudC5xdWVyeVNlbGVjdG9yKFwiLnJlc3VsdFwiKS5pbm5lckhUTUwgPVxuICAgICAgICAgICAgXCJDYXBpdGFsaXplIFMhIVwiO1xuICAgIH0gZWxzZSBpZiAod2VhdGhlcklucHV0ID09PSBcIndhcm1cIikge1xuICAgICAgICBkb2N1bWVudC5xdWVyeVNlbGVjdG9yKFwiLnJlc3VsdFwiKS5pbm5lckhUTUwgPVxuICAgICAgICAgICAgXCJDYXBpdGFsaXplIFchISFcIjtcbiAgICB9IGVsc2UgaWYgKHdlYXRoZXJJbnB1dCA9PT0gXCJyYWlueVwiKSB7XG4gICAgICAgIGRvY3VtZW50LnF1ZXJ5U2VsZWN0b3IoXCIucmVzdWx0XCIpLmlubmVySFRNTCA9XG4gICAgICAgICAgICBcIkNhcGl0YWxpemUgUiEhXCI7XG4gICAgfSBlbHNlIGlmICh3ZWF0aGVySW5wdXQgPT09IFwiY29sZFwiKSB7XG4gICAgICAgIGRvY3VtZW50LnF1ZXJ5U2VsZWN0b3IoXCIucmVzdWx0XCIpLmlubmVySFRNTCA9XG4gICAgICAgICAgICBcIkNhcGl0YWxpemUgQ1wiO1xuXG4gICAgfSBlbHNlIGlmIChhZ2VJbnB1dCA+IDEwICYmICh3ZWF0aGVySW5wdXQgPT09IFwiU3VubnlcIiB8fCB3ZWF0aGVySW5wdXQgPT09IFwiV2FybVwiKSkge1xuICAgICAgICByZXN1bHQuaW5uZXJIVE1MID1cbiAgICAgICAgICAgIFwieW91IHN0YXJ0ZWQgZHJpbmtpbmcgY29mZmVlIGF0IFwiICsgYWdlSW5wdXQgKyBcIiBhbmQgeW91ciBmYXZvcml0ZSB3ZWF0aGVyIGlzIFwiICsgd2VhdGhlcklucHV0ICsgXCI8aW1nIHNyYz0naHR0cHM6Ly93d3cudGFzdGluZ3RhYmxlLmNvbS9pbWcvZ2FsbGVyeS9ldmVyeS1zdGFyYnVja3MtcmVmcmVzaGVyLXJhbmtlZC13b3JzdC10by1iZXN0L2wtaW50cm8tMTY1NTA0MTc3Ny5qcGcnPlwiICtcIiBzbyB5b3UgYXJlIGEgUmVmcmVzaGVyXCI7XG4gICAgfSBlbHNlIGlmIChhZ2VJbnB1dCA8IDEwICYmICh3ZWF0aGVySW5wdXQgPT09IFwiU3VubnlcIiB8fCB3ZWF0aGVySW5wdXQgPT09IFwiV2FybVwiKSkge1xuICAgICAgICByZXN1bHQuaW5uZXJIVE1MID1cbiAgICAgICAgICAgIFwieW91IHN0YXJ0ZWQgZHJpbmtpbmcgY29mZmVlIGF0IFwiICsgYWdlSW5wdXQgKyBcIiBhbmQgeW91ciBmYXZvcml0ZSB3ZWF0aGVyIGlzIFwiICsgd2VhdGhlcklucHV0ICsgXCI8aW1nIHNyYz0naHR0cHM6Ly9mcm9zdGluZ2FuZGZldHR1Y2NpbmUuY29tL3dwLWNvbnRlbnQvdXBsb2Fkcy8yMDIyLzEyL0NhcmFtZWwtSWNlZC1Db2ZmZWUtNi5qcGcnPlwiICtcIiBTbyB5b3UgYXJlIGEgSWNlZCBjb2ZmZWVcIjtcbiAgICB9XG5cblxuICAgIC8vICAgICAgICAgcmVzdWx0LmlubmVySFRNTCA9XG4gICAgLy8gICAgICAgICAgICAgXCJ1ciBvbGRlciB0aGFuIDlcIjtcblxuICAgIC8vICAgICB9XG4gICAgLy8gICAgIGxldCB3ZWF0aGVySW5wdXQgPSBkb2N1bWVudC5xdWVyeVNlbGVjdG9yKFwiLndlYXRoZXJcIikudmFsdWU7XG4gICAgLy8gICAgIGNvbnNvbGUubG9nKGFnZUlucHV0KTtcbiAgICAvLyAgICAgaWYgKHdlYXRoZXJJbnB1dCA9PT0gXCJyYWlueVwiKSB7XG4gICAgLy8gICAgICAgICByZXN1bHQuaW5uZXJIVE1MID1cbiAgICAvLyAgICAgICAgICAgICBcInVyIG9sZGVyIHRoYW4gOVwiO1xuXG4gICAgLy8gICAgIH0gZWxzZSBpZiAod2VhdGhlcklucHV0ID09PSBcInN1bm55XCIpIHtcbiAgICAvLyAgICAgICAgIHJlc3VsdC5pbm5lckhUTUwgPVxuICAgIC8vICAgICAgICAgICAgIFwidXIgeW91bmdlciB0aGFuIDlcIjtcblxuICAgIC8vICAgICB9XG5cbn07Il19</script></body></html>
